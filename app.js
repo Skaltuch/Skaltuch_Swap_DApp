@@ -1,7 +1,7 @@
 let web3;
 let account;
 let skaltuchetContract;
-const contractAddress = '0xBb3ec909B1E4D5B265D522AD49D03dF548a6e702'; // Replace with your deployed contract address
+const contractAddress = '0xBb3ec909B1E4D5B265D522AD49D03dF548a6e702'; 
 const skaltuchetABI = [ 
   {
       "inputs": [
@@ -516,7 +516,7 @@ function updateUI() {
         connectButton.style.display = 'none';
         switchAccountButton.style.display = 'inline-block';
         
-        // Set up copy button functionality
+       
         copyAddressBtn.onclick = () => copyToClipboard(account);
     } else {
         connectedAccountElement.innerText = 'Not connected';
@@ -527,11 +527,11 @@ function updateUI() {
         switchAccountButton.style.display = 'none';
     }
 
-    // Always show the account card and connection status
+   
     document.querySelector('.account-card').style.display = 'block';
     connectionStatus.style.display = 'block';
 
-    // Update SKT balance
+    
     updateTokenBalance();
 }
 function copyToClipboard(text) {
@@ -543,7 +543,7 @@ function copyToClipboard(text) {
         alert('Failed to copy address. Please try again.');
     });
 }
-// Helper function to update SKT balance
+
 async function updateSKTBalance() {
     const sktBalanceElement = document.getElementById('tokenBalance');
     if (account && contract) {
@@ -642,7 +642,7 @@ async function updateTokenBalance() {
     const tokenCard = document.querySelector('.token-card');
     const refreshButton = document.getElementById('refreshBalanceBtn');
 
-    // Disable refresh button and show loading state
+    
     refreshButton.disabled = true;
     balanceElement.innerHTML = '<span class="loading">Updating...</span>';
 
@@ -691,7 +691,7 @@ darkModeToggle.addEventListener('click', () => {
     localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
 });
 
-// Load dark mode preference
+
 if (localStorage.getItem('darkMode') === 'true') {
     body.classList.add('dark-mode');
 }
@@ -719,7 +719,7 @@ form.addEventListener('submit', (e) => {
     }
 });
 
-// Smooth scroll to sections
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -729,7 +729,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Loading animation functions
+
 function showLoader() {
     document.getElementById('loader').style.display = 'block';
 }
@@ -762,7 +762,7 @@ function startCountdownTimer(endTime) {
     const timerInterval = setInterval(updateTimer, 1000);
 }
 
-// Add this function for tooltips
+
 function initTooltips() {
     const tooltips = document.querySelectorAll('[data-tooltip]');
     tooltips.forEach(tooltip => {
@@ -787,7 +787,7 @@ function initTooltips() {
     });
 }
 
-// Add this function for notifications
+
 function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification ${type}`;
@@ -809,7 +809,7 @@ function showNotification(message, type = 'info') {
 
 
 
-// Keep this line at the very end of your file
+
 
 
 window.addEventListener('load', init);
