@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skaltuchet Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+
+    <header class="fancy-header">
+        <div class="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 data-text="Skaltuchet Home">Skaltuchet Home</h1>
+        <p>Seamlessly swap ETH for SKT tokens</p>
+        <button id="darkModeToggle" class="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <a href="#swap">Swap</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="account-info">
+            <div class="account-card">
+                <div class="account-header">
+                    <h2>Connected Account</h2>
+                    <span class="connection-status"></span>
+                </div>
+                <div class="account-address">
+                    <span id="connectedAccount">Not connected</span>
+                    <button id="copyAddressBtn" class="icon-button">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="token-card">
+                <h2>SKT Balance</h2>
+                <div class="token-balance">
+                    <span id="sktBalance">0</span>
+                    <span class="token-symbol">SKT</span>
+                </div>
+                <button id="refreshBalanceBtn" class="icon-button">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </section>
+       
+        <section id="swap">
+            <div class="image-container">
+                <img src="image.jpg" alt="Center Image" class="center-image">
+                <div class="image-overlay">
+                    <p class="image-overlay-text"></p>
+                </div>
+            </div>
+
+            <div class="account-info">
+                <button id="connectButton" class="crypto-button">Connect to MetaMask</button>
+                <button id="switchAccountButton" class="crypto-button">Switch Account</button>
+            </div>
+
+            <form id="swapForm">
+                <label for="ethAmount">Amount of ETH to Swap:</label>
+                <input type="number" id="ethAmount" placeholder="Enter ETH amount" min="0" step="0.01" required>
+                <button type="submit" id="swapTokensButton" class="crypto-button">Swap ETH for SKT</button>
+            </form>
+
+            <p id="status"></p>
+        </section>
+
+        <section id="about">
+            <h2>About Skaltuchet House</h2>
+            <p>Skaltuchet House is the exclusive platform where users can seamlessly swap their ETH for SKT tokens. Whether you're looking to dive into the Skaltuchet ecosystem or expand your digital portfolio, Skaltuchet House provides a secure decentralized and intuitive experience for acquiring SKT tokens with ease. Join the future of token swapping and become part of the Skaltuchet community today!</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Mail: Kosrani_yassine@proton.me</p>
+            <p>Telegram: Rangomania69</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Skaltuchet-Home. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
