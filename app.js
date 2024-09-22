@@ -1,7 +1,7 @@
 let web3;
 let account;
 let skaltuchetContract;
-const contractAddress = '0xBb3ec909B1E4D5B265D522AD49D03dF548a6e702'; 
+const contractAddress = ' 0xb14562Bdf47A66a89538E8c8850BdDb152fd1c85'; 
 const skaltuchetABI = [ 
   {
       "inputs": [
